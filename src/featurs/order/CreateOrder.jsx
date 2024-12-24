@@ -81,7 +81,7 @@ function CreateOrder() {
           </div>
 
           {!address && (
-            <span className=' right-[3px] top-[3px] z-50 md:right-[5px] md:top-[5px] absolute'>
+            <span className=' right-[3px] top-[3px]  md:right-[5px] md:top-[5px] '>
               <Button
                 disabled={status === "loading"}
                 type='small'
@@ -135,6 +135,7 @@ function CreateOrder() {
   );
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export async function action({ request }) {
   const formData = await request.formData();
 
@@ -143,6 +144,7 @@ export async function action({ request }) {
 
   const order = {
     ...data,
+    address: data.address,
     cart: JSON.parse(data.cart),
     // priority: data.priority === "on",
   };
