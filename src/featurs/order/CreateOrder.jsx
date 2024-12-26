@@ -7,6 +7,7 @@ import store from "../../store";
 import { formatCurrency } from "../../utils/helpers";
 import { useState } from "react";
 import { fetchAddress } from "../user/userSlice";
+import Home from "../../ui/Home";
 
 // https://uibakery.io/regex-library/phone-number
 const isValidPhone = (str) =>
@@ -33,6 +34,10 @@ function CreateOrder() {
   const totalPrice = totalCartPrice + priorityPrice;
 
   const formError = useActionData();
+
+  if (cart.length === 0) {
+    return <Home />;
+  }
 
   return (
     <div className='px-4 py-6'>
@@ -70,7 +75,7 @@ function CreateOrder() {
               className='input w-full'
               type='text'
               name='address'
-              defaultValue={address ? address : null}
+              defaultValue={address ? address : ""}
               required
             />
             {errorAddress && (
@@ -140,13 +145,12 @@ export async function action({ request }) {
   const formData = await request.formData();
 
   const data = Object.fromEntries(formData);
-  console.log(data);
 
   const order = {
     ...data,
-    address: data.address,
+    // address: data.address,
     cart: JSON.parse(data.cart),
-    // priority: data.priority === "on",
+    priority: data.priority === "true",
   };
 
   let errors = {};
@@ -161,6 +165,7 @@ export async function action({ request }) {
   store.dispatch(clearCart());
 
   return redirect(`/order/${newOrder.id}`);
+  // return null;
 }
 
 export default CreateOrder;

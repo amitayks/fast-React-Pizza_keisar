@@ -15,6 +15,7 @@ function Order() {
   const order = useLoaderData();
   const fetcher = useFetcher();
 
+  console.log(order);
   useEffect(() => {
     if (!fetcher.data && fetcher.state === "idle") {
       fetcher.load("/menu");
@@ -29,6 +30,8 @@ function Order() {
     orderPrice,
     estimatedDelivery,
     cart,
+    address,
+    phone,
   } = order;
   const deliveryIn = calcMinutesLeft(estimatedDelivery);
 
@@ -76,15 +79,26 @@ function Order() {
 
       <div className='space-y-2 bg-stone-200 px-6 py-5 rounded-lg'>
         <p className='text-sm font-medium text-stone-600'>
-          Price pizza: {formatCurrency(orderPrice)}
+          Pizza price: {formatCurrency(orderPrice)}
         </p>
         {priority && (
           <p className='text-sm font-medium text-stone-600'>
-            Price priority: {formatCurrency(priorityPrice)}
+            Priority price: {formatCurrency(priorityPrice)}
           </p>
         )}
         <p className='font-bold'>
           To pay on delivery: {formatCurrency(orderPrice + priorityPrice)}
+        </p>
+      </div>
+
+      <div className='space-y-2 bg-stone-200 px-6 py-5 rounded-lg '>
+        <p className='text-sm font-medium text-stone-600 '>
+          <span className='font-bold'>Address - </span>
+          {address}
+        </p>
+        <p className='text-sm font-medium text-stone-600 '>
+          <span className='font-bold'>Phone - </span>
+          {phone}
         </p>
       </div>
       {<UpdateOrder order={order} />}
