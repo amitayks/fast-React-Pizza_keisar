@@ -35,10 +35,6 @@ function CreateOrder() {
 
   const formError = useActionData();
 
-  // if (cart.length === 0) {
-  //   return <Home />;
-  // }
-
   return (
     <div className='px-4 py-6'>
       <h2 className='mb-8 text-xl font-semibold'>{`Ready to order? Let's go!`}</h2>
@@ -161,7 +157,6 @@ export async function action({ request }) {
 
   //
   const newOrder = await createOrder(order);
-  console.log("hi");
 
   store.dispatch(clearCart());
 

@@ -10,7 +10,6 @@ import {
 import OrderItem from "./OrderItem";
 import { useEffect } from "react";
 import UpdateOrder from "./UpdateOrder";
-import Loader from "../../ui/Loader";
 
 function Order() {
   const order = useLoaderData();

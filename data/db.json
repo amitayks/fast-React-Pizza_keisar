@@ -291,6 +291,27 @@
       "orderPrice": 12,
       "priorityPrice": 0,
       "estimatedDelivery": "2024-12-27T12:30:41+02:00"
+    },
+    {
+      "customer": "amitay",
+      "phone": "+972 52 647 1797",
+      "address": "Kfar Saba, Kfar Saba , Israel",
+      "cart": [
+        {
+          "pizzaId": 1,
+          "name": "Margherita",
+          "unitPrice": 12,
+          "quantity": 1,
+          "totalPrice": 12
+        }
+      ],
+      "position": "undefined / undefined",
+      "priority": false,
+      "status": "backing",
+      "id": "B41GL7",
+      "orderPrice": 12,
+      "priorityPrice": 0,
+      "estimatedDelivery": "2024-12-27T12:44:37+02:00"
     }
   ],
   "menu": [
