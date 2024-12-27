@@ -18,6 +18,13 @@ const port = 3000;
 app.use(cors());
 app.use(express.json());
 
+app.use((req, res, next) => {
+  const delay = 1500; // Delay in milliseconds
+  setTimeout(() => {
+    next();
+  }, delay);
+});
+
 app.get("/", (req, res) => {
   console.log("Request received at /");
   res.send({ message: "Hello, world!" });

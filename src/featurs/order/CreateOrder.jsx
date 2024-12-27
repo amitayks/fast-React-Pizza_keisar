@@ -35,9 +35,9 @@ function CreateOrder() {
 
   const formError = useActionData();
 
-  if (cart.length === 0) {
-    return <Home />;
-  }
+  // if (cart.length === 0) {
+  //   return <Home />;
+  // }
 
   return (
     <div className='px-4 py-6'>
@@ -161,11 +161,11 @@ export async function action({ request }) {
 
   //
   const newOrder = await createOrder(order);
+  console.log("hi");
 
   store.dispatch(clearCart());
 
   return redirect(`/order/${newOrder.id}`);
-  // return null;
 }
 
 export default CreateOrder;

@@ -181,6 +181,116 @@
       "orderPrice": 48,
       "priorityPrice": 0,
       "estimatedDelivery": "2024-12-27T02:06:49+02:00"
+    },
+    {
+      "customer": "d",
+      "phone": "+972 52 647 1797",
+      "address": "Kfar Saba, Kfar Saba , Israel",
+      "cart": [
+        {
+          "pizzaId": 3,
+          "name": "Romana",
+          "unitPrice": 15,
+          "quantity": 2,
+          "totalPrice": 30
+        },
+        {
+          "pizzaId": 4,
+          "name": "Prosciutto e Rucola",
+          "unitPrice": 16,
+          "quantity": 3,
+          "totalPrice": 48
+        },
+        {
+          "pizzaId": 16,
+          "name": "Eggplant Parmesan",
+          "unitPrice": 15,
+          "quantity": 1,
+          "totalPrice": 15
+        },
+        {
+          "pizzaId": 15,
+          "name": "Pesto Chicken",
+          "unitPrice": 16,
+          "quantity": 1,
+          "totalPrice": 16
+        }
+      ],
+      "position": "undefined / undefined",
+      "status": "backing",
+      "id": "9RVQWK",
+      "orderPrice": 109,
+      "priorityPrice": 0,
+      "estimatedDelivery": "2024-12-27T12:34:55+02:00"
+    },
+    {
+      "customer": "d",
+      "phone": "+972 52 647 1797",
+      "address": "Kfar Saba, Kfar Saba , Israel",
+      "cart": [
+        {
+          "pizzaId": 1,
+          "name": "Margherita",
+          "unitPrice": 12,
+          "quantity": 1,
+          "totalPrice": 12
+        }
+      ],
+      "position": "undefined / undefined",
+      "status": "backing",
+      "id": "7HWIJ9",
+      "orderPrice": 12,
+      "priorityPrice": 0,
+      "estimatedDelivery": "2024-12-27T12:23:51+02:00"
+    },
+    {
+      "customer": "amitay",
+      "phone": "+972 52 647 1797",
+      "address": "jerusalem, mafia, 34",
+      "cart": [
+        {
+          "pizzaId": 1,
+          "name": "Margherita",
+          "unitPrice": 12,
+          "quantity": 1,
+          "totalPrice": 12
+        },
+        {
+          "pizzaId": 3,
+          "name": "Romana",
+          "unitPrice": 15,
+          "quantity": 1,
+          "totalPrice": 15
+        }
+      ],
+      "position": "undefined / undefined",
+      "priority": true,
+      "status": "backing",
+      "id": "5JY3QJ",
+      "orderPrice": 27,
+      "priorityPrice": 0,
+      "estimatedDelivery": "2024-12-27T12:27:27+02:00"
+    },
+    {
+      "customer": "amitay",
+      "phone": "+972 52 647 1797",
+      "address": "Batsra, Ra'anana , Israel",
+      "cart": [
+        {
+          "pizzaId": 1,
+          "name": "Margherita",
+          "unitPrice": 12,
+          "quantity": 1,
+          "totalPrice": 12
+        }
+      ],
+      "position": "undefined / undefined",
+      "priority": true,
+      "status": "backing",
+      "id": "CIMZYX",
+      "orderPrice": 12,
+      "priorityPrice": 0,
+      "estimatedDelivery": "2024-12-27T12:30:41+02:00"
     }
   ],
   "menu": [
